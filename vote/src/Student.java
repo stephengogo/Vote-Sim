@@ -18,8 +18,9 @@ public class Student {
     public String id;
     public String answer;
 
-    public Student(String id){
+    public Student(String id, String answer){
         this.id = id;
+        this.answer = answer;
     }
 
 }
