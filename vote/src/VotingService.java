@@ -1,71 +1,59 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.TreeSet;
+import java.util.*;
 
 public class VotingService {
-
     public Question q;
     public HashMap<String, String> id_answer_hashmap = new HashMap<String, String>();
     HashSet<String> answer_hashset = new HashSet<String>();
 
+    /**VotingService Constructor */
     public VotingService(Question q){
         this.q = q;
     }
 
+    /**Add a new student to VotingService via hashmap and hashset */
     public void addStudentAnswer(Student student){
         if(!id_answer_hashmap.containsKey(student.getId())){
             this.id_answer_hashmap.put(student.getId(), student.getAnswer());
             this.answer_hashset.add(student.getAnswer());
         }
-        /*if(question_type.equals("MC")){
-            if (student.getAnswer().equals("A") || student.getAnswer().equals("B") || student.getAnswer().equals("C") || student.getAnswer().equals("D")){
-                System.out.println("Acceptable answer");
-            }
-
-        }*/
     }
 
+    /**Analyze all student answers and print the stats. */
     public void printStatistics(){
+        List<String> list = new ArrayList<String>(answer_hashset);
+        Collections.sort(list);
+        ArrayList<Integer> counter = new ArrayList<Integer>();
 
-        System.out.println(id_answer_hashmap);
-        TreeSet<String> treeSet = new TreeSet<String>(answer_hashset);
-        System.out.println(treeSet);
-        //System.out.println("Correct answer is " + Arrays.toString(this.q.correct_answer));
-    }
-
-    public static void main(String[] args) {
-        HashMap<String, String> test = new HashMap<String, String>();
-        HashSet<String> hset = new HashSet<String>();
-
-        test.put("as234s", "A");
-        test.put("sadf", "A");
-        test.put("fsd2", "B");
-        test.put("h23", "AB");
-        test.put("2134", "ABC");
-        test.put("dsf2", "CD");
-        if(!test.containsKey("as234s")){
-
-            test.put("as234s", "B");
-        }
-
-        int A_count = 0;
-        for (String i : test.keySet()) {
-            if(test.get(i) == "A"){
-                A_count++;
+        for (int i = 0; i < list.size(); i++) {
+            int count = 0;
+            for (String j : id_answer_hashmap.keySet()) {
+                if(id_answer_hashmap.get(j).equals(list.get(i))){
+                    count++;
+                }
             }
-            hset.add(test.get(i));
-            //System.out.println(test.get(i));
-
-
-
-            //System.out.println("Name: " + i + " Age: " + test.size());
+            counter.add(count);
         }
 
-        System.out.println(hset);
-        TreeSet<String> treeSet = new TreeSet<String>(hset);
-        System.out.println(treeSet);
-        //System.out.println(A_count);
+        // Optional Code used to print the sorted list of possible answer choices and amount chosen
+        /*System.out.println(list);
+        System.out.println(counter);*/
 
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < list.size(); i++) {
+            sb.append(list.get(i));
+            sb.append(" : ");
+            sb.append(counter.get(i));
+            sb.append(", ");
+        }
+
+        sb.deleteCharAt(sb.length() - 2);
+        System.out.println(sb.toString());
+
+        StringBuilder sb_correct_answer = new StringBuilder();
+        for (int i = 0; i < q.correct_answer.length; i++) {
+            sb_correct_answer.append(q.correct_answer[i]);
+        }
+        System.out.println("Correct answer is " + sb_correct_answer.toString() + ".");
     }
+
 }

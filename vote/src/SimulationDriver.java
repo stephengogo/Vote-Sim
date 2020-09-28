@@ -8,7 +8,7 @@ public class SimulationDriver {
         /** Simulate Multiple Choice question */
         String[] mcq_answer_choices = {"A", "B", "C", "D"};
         String[] mcq_answer = {"C", "D"};
-        Question mcq = new Question("Multiple Choice", mcq_answer_choices, mcq_answer);
+        Question mcq = new Question("Multiple Choice Example", mcq_answer_choices, mcq_answer);
 
         VotingService vs_mcq = new VotingService(mcq);
 
@@ -33,6 +33,7 @@ public class SimulationDriver {
             }
         }
 
+        /** Take the generated Student IDs and allow students to answer the multiple choice question at Random*/
         for (int i = 0; i < number_of_students; i++) {
             StringBuilder sb = new StringBuilder();
             for (int j = 0; j < mcq_answer_choices.length; j++) {
@@ -49,9 +50,7 @@ public class SimulationDriver {
                 int rand_int = random.nextInt(mcq_answer_choices.length - 1);
                 sb.append(mcq_answer_choices[rand_int]);
             }
-            //System.out.println(sb);
 
-            //System.out.println(student_ids_arrlist.get(i));
             Student s = new Student(student_ids_arrlist.get(i), sb.toString());
             System.out.println(s.getId() + " " + s.getAnswer());
             vs_mcq.addStudentAnswer(s);
@@ -61,28 +60,23 @@ public class SimulationDriver {
         vs_mcq.printStatistics();
 
 
-
         /** Simulate Single Choice question */
         String[] scq_answer_choices = {"A", "B", "C", "D"};
         String[] scq_answer = {"B"};
-        Question scq = new Question("Single Choice", scq_answer_choices, scq_answer);
+        Question scq = new Question("Single Choice Example", scq_answer_choices, scq_answer);
 
         VotingService vs_scq = new VotingService(scq);
+        /**Reuse pre-generated student Ids and fill them with single choice answers at random */
+
+
 
         /** Simulate True/False question */
         String[] tfq_answer_choices = {"True", "False"};
         String[] tfq_answer = {"True"};
-        Question tfq = new Question("True False", tfq_answer_choices, tfq_answer);
+        Question tfq = new Question("True False Example", tfq_answer_choices, tfq_answer);
+
+        /**Reuse pre-generated student Ids and fill them with T/F answers at random */
 
 
-
-
-        // some tests...
-        String[] test = {"1", "2"};
-        String[] test2 = {"2", "1"};
-        if(Arrays.equals(test, test2)){
-            // no because order is wrong
-            System.out.println("they are equal");
-        }
     }
 }
