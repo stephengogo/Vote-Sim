@@ -13,13 +13,12 @@ public class Question {
         question_type = qtype;
         answer_choices = answerChoices;
         correct_answer = correctAnswer;
-        /*if(qtype.equals("Single Choice")){
+    }
+}
+
+/*if(qtype.equals("Single Choice")){
             questionType = qtype;
         }
         else if (qtype.equals("Multiple Choice")){
             questionType = qtype;
         }*/
-    }
-
-
-}
