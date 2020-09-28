@@ -1,3 +1,5 @@
+/**Stephen Lee*/
+
 import java.util.*;
 
 public class VotingService {
@@ -34,7 +36,7 @@ public class VotingService {
             counter.add(count);
         }
 
-        // Optional Code used to print the sorted list of possible answer choices and amount chosen
+        /** Optional Code used to print the sorted list of possible answer choices and amount chosen */
         /*System.out.println(list);
         System.out.println(counter);*/
 
@@ -53,6 +55,7 @@ public class VotingService {
         for (int i = 0; i < q.correct_answer.length; i++) {
             sb_correct_answer.append(q.correct_answer[i]);
         }
+
         System.out.println("Correct answer is " + sb_correct_answer.toString() + ".");
     }
 

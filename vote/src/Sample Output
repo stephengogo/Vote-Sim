@@ -1,0 +1,83 @@
+Stephen Lee
+CS3560 A1
+
+Sample Output:
+Print 20 Student ID and Answer:
+Student ID: ZL267GT, Student Answer: ABD
+Student ID: 9JAD9G5, Student Answer: AD
+Student ID: AUJ66F6, Student Answer: AD
+Student ID: Q7U6HUY, Student Answer: BD
+Student ID: NQ14KF4, Student Answer: AC
+Student ID: EJ8WBEA, Student Answer: ABC
+Student ID: 13VA6SC, Student Answer: A
+Student ID: HDZJISA, Student Answer: ABD
+Student ID: 1DMFOYZ, Student Answer: AB
+Student ID: H3X762T, Student Answer: C
+Student ID: KEI3NRY, Student Answer: ABD
+Student ID: IGUDTMY, Student Answer: ABD
+Student ID: OUS85IN, Student Answer: BCD
+Student ID: 352UMF5, Student Answer: A
+Student ID: RWE4LSX, Student Answer: CD
+Student ID: JVTR0S1, Student Answer: BC
+Student ID: Q71N510, Student Answer: BCD
+Student ID: RTA34CV, Student Answer: AB
+Student ID: GOXWS78, Student Answer: ACD
+Student ID: 8OPFN8E, Student Answer: D
+
+Multiple Choice Question Statistics:
+A : 2, AB : 2, ABC : 1, ABD : 4, AC : 1, ACD : 1, AD : 2, BC : 1, BCD : 2, BD : 1, C : 1, CD : 1, D : 1
+Correct answer is CD.
+
+Print 20 Student ID and Answer:
+Student ID: ZL267GT, Student Answer: B
+Student ID: 9JAD9G5, Student Answer: D
+Student ID: AUJ66F6, Student Answer: A
+Student ID: Q7U6HUY, Student Answer: B
+Student ID: NQ14KF4, Student Answer: A
+Student ID: EJ8WBEA, Student Answer: A
+Student ID: 13VA6SC, Student Answer: D
+Student ID: HDZJISA, Student Answer: D
+Student ID: 1DMFOYZ, Student Answer: D
+Student ID: H3X762T, Student Answer: A
+Student ID: KEI3NRY, Student Answer: C
+Student ID: IGUDTMY, Student Answer: B
+Student ID: OUS85IN, Student Answer: C
+Student ID: 352UMF5, Student Answer: C
+Student ID: RWE4LSX, Student Answer: D
+Student ID: JVTR0S1, Student Answer: C
+Student ID: Q71N510, Student Answer: C
+Student ID: RTA34CV, Student Answer: C
+Student ID: GOXWS78, Student Answer: B
+Student ID: 8OPFN8E, Student Answer: B
+
+Single Choice Question Statistics:
+A : 4, B : 5, C : 6, D : 5
+Correct answer is B.
+
+Print 20 Student ID and Answer:
+Student ID: ZL267GT, Student Answer: True
+Student ID: 9JAD9G5, Student Answer: False
+Student ID: AUJ66F6, Student Answer: True
+Student ID: Q7U6HUY, Student Answer: False
+Student ID: NQ14KF4, Student Answer: True
+Student ID: EJ8WBEA, Student Answer: True
+Student ID: 13VA6SC, Student Answer: True
+Student ID: HDZJISA, Student Answer: False
+Student ID: 1DMFOYZ, Student Answer: True
+Student ID: H3X762T, Student Answer: False
+Student ID: KEI3NRY, Student Answer: True
+Student ID: IGUDTMY, Student Answer: True
+Student ID: OUS85IN, Student Answer: True
+Student ID: 352UMF5, Student Answer: True
+Student ID: RWE4LSX, Student Answer: True
+Student ID: JVTR0S1, Student Answer: True
+Student ID: Q71N510, Student Answer: False
+Student ID: RTA34CV, Student Answer: True
+Student ID: GOXWS78, Student Answer: True
+Student ID: 8OPFN8E, Student Answer: True
+
+True/False Question Statistics:
+False : 5, True : 15
+Correct answer is True.
+
+Process finished with exit code 0
